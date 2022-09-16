@@ -1,0 +1,365 @@
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #868e96;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #868e96;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --azzurro: #7abfc4;
+    --giallo: #e9bd3d;
+    --verdescuro: #55664f;
+    --verdesalvia: #91a67c; /* rgb(145, 166, 124) */
+    --indianred: #cd5c5c;
+    --white: #ffffff;
+    --whitelight: #eeeeee;
+    --fullscreen: rgb(33, 37, 41, 0.5);
+    --gold: rgb(255, 215, 0);
+    --silver: rgb(192, 192, 192, 0.5);
+    --transparent-blue: rgba(0, 0, 255, 0.1);
+    --brown: #66001A;
+    /* section dark */
+    --darkblue: rgb(0, 0, 139);
+    --darkcyan: rgb(0, 139, 139);
+    --darkgoldenrod: rgb(184, 134, 11);
+    --darkgray: rgb(169, 169, 169);
+    --darkgreen: rgb(0, 100, 0);
+    --darkgrey: rgb(169, 169, 169);
+    --darkkhaki: rgb(189, 183, 107);
+    --darkmagenta: rgb(139, 0, 139);
+    --darkolivegreen: rgb(85, 107, 47);
+    --darkorange: rgb(255, 140, 0);
+    --darkorchid: rgb(153, 50, 204);
+    --darkred: rgb(139, 0, 0);
+    --darksalmon: rgb(233, 150, 122);
+    --darkseagreen: rgb(143, 188, 143);
+    --darkslateblue: rgb(72, 61, 139);
+    --darkslategray: rgb(47, 79, 79);
+    --darkslategrey: rgb(47, 79, 79);
+    --darkturquoise: rgb(0, 206, 209);
+    --darkviolet: rgb(48, 0, 211);
+    /* section dark */
+    /* section light */
+    --lightblue: rgb(173, 216, 230);
+    --lightcoral: rgb(240, 128, 128);
+    --lightcyan: rgb(224, 255, 255);
+    --lightgoldenrodyellow: rgb(250, 250, 210);
+    --lightgray: rgb(211, 211, 211);
+    --lightgreen: rgb(144, 238, 144);
+    --lightgrey: rgb(211, 211, 211);
+    --lightpink: rgb(255, 182, 193);
+    --lightsalmon: rgb(255, 160, 122);
+    --lightseagreen: rgb(32, 178, 170);
+    --lightskyblue: rgb(135, 206, 250);
+    --lightslategray: rgb(119, 136, 153);
+    --lightslategrey: rgb(119, 136, 153);
+    --lightsteelblue: rgb(176, 196, 222);
+    --lightyellow: rgb(255, 255, 224);
+    --floralwhite: rgb(255,250,240);
+    --color-utility: #2980b9;
+    --color-metanonord: #27ae60;
+}/* ./root */
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+/* NAVBAR */
+.fi-navbar {
+    background-color: var(--dark);
+    color: var(--floralwhite);
+}
+.fi-navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 20vw;
+    height: 100%;
+    background-color: var(--dark);
+    position: fixed; left: 0; top:0;
+    overflow: auto;
+}
+.fi-navbar li a {
+    display: block;
+    color: var(--floralwhite);
+    padding: 8px 28px;
+    text-decoration: none;
+    background-image: url('../images/number.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+}
+.fi-navbar li a:hover {
+    background-color: var(--floralwhite);
+    color: var(--primary);
+}
+.fi-navbar .active a {
+    background-color: var(--floralwhite);
+    color: var(--dark);
+}
+.fi-navbar li {
+    border-bottom: 1px solid var(--darkgray);
+}
+.fi-navbar li:last-child {
+    border-bottom: none;
+}
+/* ./NAVBAR */
+.fi-fullscreen {
+    position: absolute; left:0; top:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--fullscreen);
+    display: none;
+    z-index: 100;
+}
+.fi-alert {
+    position: absolute; left: 50%; top: -50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background-color: var(--darkorchid);
+    width: 30%;
+    height: 15%;
+    z-index: 101;
+}
+.fi-alert-close {
+    transition: 0.5s;
+    position: absolute; left: 0.5%; top: 0;
+    margin: 2px 2px 0 0;
+    background-image: url('../images/close.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px;
+    z-index: 103;
+    height: 17px;
+    width: 17px;
+    border-radius: 100%;
+    /*border: 1px solid var(--dark);*/
+    box-shadow: 0 3px 9px var(--dark);
+}
+.fi-alert-close:hover {
+    transition: 0.5s;
+    box-shadow: 0 0 0;
+}
+.fi-alert-header {
+    position: absolute; left:0; top:0; right:0;
+    background-color: var(--floralwhite);
+    border-radius: 4px 4px 0 0;
+    height: 35%;
+    z-index: 102;
+}
+.fi-alert-body {
+    position: absolute; left: 0; top: 35%; right: 0;
+    height: 65%;
+    border-radius: 0 0 4px 4px;
+    padding: 4px;
+    z-index: 104;
+    color: var(--dark);
+    overflow: auto;
+}
+.fi-wrapper-s {
+    position:absolute; left: 20%; top:0; right: 0;
+    border: 1px solid var(--dark);
+    height: 100%;
+    padding-left: 4px;
+    background-color: var(--floralwhite);
+    overflow: auto;
+    z-index: 99;
+}
+.fi-wrapper-s .fi-panel-header-s {
+    position: fixed; left: 20%; top: 0; right:0;
+    background-color: var(--info);
+    text-align: center;
+    color: var(--floralwhite);
+    height: 10%;
+    z-index: 98;
+}
+.fi-wrapper-s .fi-panel-body-s {
+    position: absolute; left: 0; top: 9%; right:0;
+    background-color: var(--lightgray);
+    color: var(--dark);
+    height: 86%;
+    overflow: auto;
+    padding: 8px;
+    z-index: 97;
+}
+.fi-company {
+    position: fixed; left: 20%; bottom: 0; right:0;
+    text-align: right;
+    height: 3.2%;
+    line-height: 25px;
+    background-color: var(--dark);
+    color: var(--floralwhite);
+    padding-right: 4px;
+}
+.div-question {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: var(--azzurro);
+    gap: 10px;
+    z-index: 95;
+    text-align: center;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 3px 9px var(--dark);
+    color: var(--floralwhite);
+    font-weight: bold;
+    text-decoration: underline;
+}
+/*
+.div-question::before /*:: after {
+    content: "Qual è l'olio migliore per friggere ?";
+}
+*/
+.div-question-button {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+    border: 1px solid var(--primary);
+    padding: 20px;
+}
+.btn {
+    transition: 2s;
+    padding: 30px;
+    border: 1px solid var(--info);
+    border-radius: 4px;
+    box-shadow: 0 3px 9px var(--dark);
+    cursor: pointer;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 32px;
+}
+.qs-btn-1 {
+    /*background-image: url('../images/success.png');*/
+}
+.qs-btn-1:hover {
+    transition: 2s;
+    background-color: var(--darkgreen);
+}
+.qs-btn-2 {
+    /*background-image: url('../images/success.png');*/
+}
+.qs-btn-2:hover {
+    transition: 2s;
+    background-color: var(--green);
+}
+.qs-btn-3 {
+    background-image: url('../images/wedding-car-back_87139.png');
+}
+.qs-btn-3:hover {
+    transition: 2s;
+    background-color: var(--azzurro);
+}
+.btn:active {
+    transition: 0.1s;
+    box-shadow: 0 0 0;
+}
+@keyframes rotation {
+    0% {transform: rotate(0deg)}
+    25% {transform: rotate(90deg)}
+    50% {transform: rotate(180deg)}
+    75% {transform: rotate(240deg)}
+    100% {transform: rotate(360deg)}
+}
+.fi-animation {
+    animation-name: rotation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+.fi-crs-pointer {   
+    cursor: pointer; 
+}
+
+/* questo ti serve per pulire il dom soprattutto quando usi float: left/right */
+.fi-clean {
+    clear: both;
+}/* ./questo ti serve per pulire il dom soprattutto quando usi float: left/right */
+ /* portrait only iPhon */
+ @media only screen and (max-device-width: 800px) and (orientation: portrait) {
+    .fi-alert {
+        width: 80%;
+    }
+    .fi-alert-header {
+        height: 50px;
+    }
+    .fi-alert-body {
+        position: absolute; left: 0; top: 50px !important; right: 0;
+    }
+    .fi-wrapper .fi-panel-body-content .cls button {
+        position: relative; left: 25% !important; top: 25% !important;
+    }
+    .fi-wrapper .fi-panel-body-content {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}
+/* portrait only iPad */
+@media only screen and (min-device-width: 810px) and (orientation: portrait) {
+    .fi-alert {
+        width: 80%;
+    }
+    .fi-wrapper .fi-panel-body-content .cls button {
+        position: relative; left: 200% !important; top: 25% !important;
+    }
+    .fi-wrapper .fi-panel-body-content {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}
+/* landscape only iPhone */
+@media only screen and (max-device-height: 800px) and (orientation: landscape) {
+    .fi-alert {
+        width: 80%;
+    }
+    .fi-alert-header {
+        height: 50px;
+    }
+    .fi-alert-body {
+        position: absolute; left: 0; top: 50px !important; right: 0;
+    }
+    .fi-wrapper-s .fi-panel-header-s { 
+        height: 15%;
+    }
+    .fi-wrapper .fi-panel-header { 
+        height: 20% !important;
+    }
+    .fi-wrapper .fi-panel-body { 
+        position: absolute; left: 0; top: 20% !important; right:0;
+    }
+    .fi-wrapper .fi-panel-footer {
+        height: 30% !important;
+        line-height: 35px;
+    }
+    .fi-wrapper .fi-panel-body-content .cls button {
+        position: absolute; left: 10px !important; top: 60px !important;
+    }
+}
+/* landscape only iPad */
+@media only screen
+    and (min-device-width: 834px) 
+    and (max-device-width: 1112px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+    .fi-alert {
+        width: 80%;
+        height: 20%;
+    }
+    .fi-wrapper .fi-panel-body-content .cls button {
+        position: absolute; left: 30px !important; top: 60px !important;
+    }
+    .fi-wrapper .fi-panel-footer {
+        height: 11vh !important;
+    }
+}

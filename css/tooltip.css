@@ -1,0 +1,20 @@
+.fi-tooltip {
+    position: absolute;
+    /*display: inline-block;*/
+    /*border-bottom: 1px dotted var(--fi-dark);*/
+}
+.fi-tooltip .fi-tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: var(--dark);
+    color: var(--floralwhite);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    /*Position the tooltip*/
+    position: absolute; left: 20%; top:20%; /*left:0 bottom:0*/
+    font-family: 'Courier New', Courier, monospace;
+}
+.fi-tooltip:hover .fi-tooltiptext {
+    visibility: visible;
+}

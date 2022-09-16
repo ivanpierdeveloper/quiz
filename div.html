@@ -1,0 +1,347 @@
+        <style type="text/css">
+            .fi-wrapper {
+                position:absolute; left: 0.5vw; top:0.5vh;
+                border: 1px solid var(--dark);
+                border-radius: 4px;
+                width: 99vw;
+                height: 99vh;
+                background-color: var(--floralwhite);
+                overflow: auto;
+                z-index: 6;
+                box-shadow: 0 3px 9px var(--dark);
+            }
+            .fi-wrapper .fi-panel-header {
+                position: absolute; left: 0; top: 0; right:0;
+                background-color: var(--info);
+                text-align: center;
+                color: var(--floralwhite);
+                border-radius: 4px 4px 0 0;
+                height: 10vh;
+                z-index: 3;
+            }
+            .fi-wrapper .fi-panel-body {
+                position: absolute; left: 0; top: 10vh; right:0;
+                background-color: var(--lightgray);
+                color: var(--floralwhite);
+                height: 79vh;
+                overflow: auto;
+                padding: 4px;
+                z-index: 2;
+            }
+            .fi-wrapper .fi-panel-body-content {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 8px;
+                
+            }
+            .fi-wrapper .fi-panel-footer {
+                position: absolute; left:0; top: 89vh; right: 0;
+                background-color: var(--lightgray);
+                height: 10vh;
+                text-align: center;
+                color: var(--floralwhite);
+                border-radius: 0 0 4px 4px;
+                z-index: 1;
+            }
+            .fi-wrapper .fi-panel-body-content .cls button {
+                background-color: transparent;
+                background-color: var(--floralwhite);
+                border: 1px solid var(--dark);
+                border-radius: 4px;
+                height: 40px;
+                width: 120px;
+                padding-left: 20px;
+            }
+            .fi-button-background {
+                background-repeat: no-repeat;
+                background-position: 4px center;
+                background-size: 18px;
+            }
+            .fi-wrapper .fi-panel-body .fi-btn-info {
+                background-image: url('../images/info.png');
+            }
+            .fi-wrapper .fi-panel-body .fi-btn-success {
+                background-image: url('../images/success.png');
+            }
+            .fi-wrapper .fi-panel-body .fi-btn-warning {
+                background-image: url('../images/warning.png');
+            }
+            .fi-wrapper .fi-panel-body .fi-btn-save {
+                background-image: url('../images/brm_racing_car_18613.png');
+            }
+            .fi-wrapper .fi-panel-body .fi-show-msg {
+                background-image: url('../images/fire_chief_car_18597.png');
+            }
+            .cls {
+                border: 1px solid var(--dark);
+                height: 200px;
+                border-radius: 4px;
+                padding: 4px;
+                color: var(--darkorchid);
+            }
+            .fi-wrapper .fi-panel-body-content .cls button {
+                margin-left: 80%;
+                margin-top: 60%;
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg {
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100% !important;
+                height: 100% !important;
+                cursor: zoom-in;
+                box-shadow: 0 3px 9px var(--dark);
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg0 {
+                background-image: url('../images/bg/bg0.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg1 {
+                background-image: url('../images/bg/bg1.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg2 {
+                background-image: url('../images/bg/bg2.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg3 {
+                background-image: url('../images/bg/bg3.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg4 {
+                background-image: url('../images/bg/bg4.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg5 {
+                background-image: url('../images/bg/bg5.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg6 {
+                background-image: url('../images/bg/bg6.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg7 {
+                background-image: url('../images/bg/bg7.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg8 {
+                background-image: url('../images/bg/bg8.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg9 {
+                background-image: url('../images/bg/bg9.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg10 {
+                background-image: url('../images/bg/bg10.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg11 {
+                background-image: url('../images/bg/bg11.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg12 {
+                background-image: url('../images/bg/bg12.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg13 {
+                background-image: url('../images/bg/bg13.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg14 {
+                background-image: url('../images/bg/bg14.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg15 {
+                background-image: url('../images/bg/bg15.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg16 {
+                background-image: url('../images/bg/bg16.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg17 {
+                background-image: url('../images/bg/bg17.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg18 {
+                background-image: url('../images/bg/bg18.jpg');
+            }
+            .fi-wrapper .fi-panel-body-content .cls .bg19 {
+                background-image: url('../images/bg/bg19.jpg');
+            }
+            .fi-zoom-image {
+                position: absolute; left: 10%; top: 10%;
+                width: 80%;
+                height: 80%;
+                background-color: transparent;
+                border: 1px solid var(--dark);
+                border-radius: 4px;
+                z-index: 103;
+                cursor: zoom-out;
+                display: none;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <div class="fi-zoom-image"></div>
+        <div class="fi-wrapper">
+        <div class="fi-panel-header"><h1>Div | Position</h1></div>
+        <div class="fi-panel-body">
+            <div class="fi-panel-body-content">
+                <div class="cls">
+                    <div class="fi-tooltip">
+                        <div class="fi-tooltiptext">Mostra messaggio nel footer</div>
+                        <button class="fi-btn fi-btn-save fi-button-background fi-crs-pointer">Mostra messaggio</button>
+                    </div><!-- ./fi-tooltip -->
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip">
+                        <span class="fi-tooltiptext">Mostra messaggio nel footer</span>
+                        <button class="fi-btn fi-show-msg fi-button-background fi-crs-pointer">Mostra messaggio</button>
+                    </div><!-- ./fi-tooltip -->
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip">
+                        <span class="fi-tooltiptext">Mostra alert a comparsa INFO</span>
+                        <button class="fi-btn fi-alert-message fi-btn-info fi-button-background fi-crs-pointer">Alert Info</button>
+                    </div><!-- ./fi-tooltip -->
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip">
+                        <span class="fi-tooltiptext">Mostra alert a comparsa SUCCESS</span>
+                        <button class="fi-btn fi-alert-message fi-btn-success fi-button-background fi-crs-pointer">Alert Success</button>
+                    </div><!-- ./fi-tooltip-->
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip">
+                        <div class="fi-tooltiptext">Mostra alert a comparsa WARNING</div>
+                        <button class="fi-btn fi-alert-message fi-btn-warning fi-button-background fi-crs-pointer">Alert Warning</button>
+                    </div><!-- ./fi-tooltip-->
+                </div>
+                <!-- row-2 -->
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg0" data-id1 = "../images/bg/bg0.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg1" data-id1 = "../images/bg/bg1.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg2" data-id1 = "../images/bg/bg2.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg3" data-id1 = "../images/bg/bg3.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg4" data-id1 = "images/bg/bg4.jpg"></div>
+                    </div>
+                </div>
+                <!-- ./row-2 -->
+                <!-- row-3 -->
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg5" data-id1 = "../images/bg/bg5.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg6" data-id1 = "../images/bg/bg6.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg7" data-id1 = "../images/bg/bg7.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg8" data-id1 = "../images/bg/bg8.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg9" data-id1 = "../images/bg/bg9.jpg"></div>
+                    </div>
+                </div>
+                <!-- ./row-3 -->
+                <!-- row-4 -->
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg10" data-id1 = "../images/bg/bg10.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg11" data-id1 = "../images/bg/bg11.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg12" data-id1 = "../images/bg/bg12.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg13" data-id1 = "../images/bg/bg13.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg14" data-id1 = "../images/bg/bg14.jpg"></div>
+                    </div>
+                </div>
+                <!-- ./row-4 -->
+                <!-- row-5 -->
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg15" data-id1 = "../images/bg/bg15.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg16" data-id1 = "../images/bg/bg16.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg17" data-id1 = "../images/bg/bg17.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg18" data-id1 = "../images/bg/bg18.jpg"></div>
+                    </div>
+                </div>
+                <div class="cls">
+                    <div class="fi-tooltip" style="position: relative; height: 100%;">
+                        <span class="fi-tooltiptext" style="position: absolute; left: 10%; top: 35%;">Visualizza immagine</span>
+                        <div class="bg bg19" data-id1 = "../images/bg/bg19.jpg"></div>
+                    </div>
+                </div>
+            <!-- ./row-5 -->
+            </div><!-- ./fi-panel-body-content -->
+        </div><!-- ./fi-panel-body -->
+        <div class="fi-panel-footer"></div><!-- ./fi-footer -->
+        <script type='module' src='../js/div.js'></script>
+        </div><!-- ./fi-wrapper -->
+        <!--
+            <script type="module" defer>
+                // Funziona tutto perfettamente
+                import {msgSuccess, msgDanger, fnc, CLS, stampa} from './js/module.js';
+                let div = document.querySelector('.fi-wrapper');
+                div.addEventListener('click', function() {
+                    msgSuccess("AVVISO", "Questo è un messaggio di prova :-D");
+                });
+            </script>
+        -->
